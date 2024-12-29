@@ -1,0 +1,13 @@
+{
+    "port": 8082,
+    "secret":"kfcfkxqsvw50",
+    "blacklist": [
+        "pornhub.com",
+        "missav.com",
+        "twitter.com",
+        "youtube.com",
+        "x.com",
+        "facebook.com",
+        "tiktok.com"
+    ]
+}
