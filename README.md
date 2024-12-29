@@ -2,7 +2,7 @@
 
 ## 一、介绍
 
-简单使用Nodejs实现反向代理，可以反向代理诸如H5页面、音视频、图片、文本等内容，当然可以用来解决CORS问题。
+简单使用Nodejs实现反向代理，可以反向代理诸如文档、音视频、图片、文本等内容，当然可以用来解决CORS问题。
 
 ## 二、安装
 
@@ -17,7 +17,8 @@ cnpm/npm install
 安装后，通过下面命令给index.js和config.json添加可读权限。
 
 ```
-chmod +x index.js   chmod +x config.json
+chmod +x index.js 
+chmod +x config.json
 ```
 
 最后，通过下面命令来运行项目。
@@ -35,8 +36,8 @@ node index.js  或者  npm/cnpm start
 ```
 sudo apt update
 apt install screen
-screen -S proxy（这里是会话名）
-cd ~/proxy && node index.js（进入新会话，执行项目）
+screen -S proxy //这里是会话名
+cd ~/proxy && node index.js //进入新会话，执行项目
 ```
 
 然后按Ctrl+A+D来退出新创建的会话，使用screen -ls即可查看刚才创建的新会话。
@@ -49,3 +50,10 @@ cd ~/proxy && node index.js（进入新会话，执行项目）
 
 port后即项目运行端口号，secret后即秘钥内容，blacklist后即域名黑名单（用户无法访问该域名及其子域名）！
 
+## 五、项目访问
+
+WEB页面：http://127.0.0.1:8082/proxy.html
+
+http://127.0.0.1:8082/proxy2.html
+
+API接口：http://127.0.0.1:8082/?url=（这里最好对填写代理的URL进行URL编码，即encodeURIComponent('代理URL')）
