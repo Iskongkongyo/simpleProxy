@@ -1,0 +1,21 @@
+{
+  "name": "proxyweb",
+  "version": "1.0.0",
+  "description": "这是一个简单反代网站的脚本",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node index.js"
+  },
+  "keywords": [
+    "反代、网站、反代网站"
+  ],
+  "author": "iskongkongya",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "chokidar": "^4.0.1",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1"
+  }
+}
