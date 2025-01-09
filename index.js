@@ -62,16 +62,18 @@ function getTargetUrl(baseUrl, path) {
 
 // 限制允许的 HTTP 方法
 app.all('*', (req, res, next) => {
-  if (req.method !== 'GET') {
-    return res.status(405).send('只允许发送GET请求！');
+  if (req.method !== 'GET' && req.method !== 'OPTIONS') {
+    return res.status(405).send('只允许发送GET和OPTIONS请求！');
   }
+  res.setHeader('Access-Control-Allow-Origin','*');//允许跨域请求
+  res.setHeader('Access-Control-Allow-Methods','GET,OPTIONS');//允许跨域请求方法
+  res.setHeader('Access-Control-Allow-Headers','');//自定义请求头
   next();
 });
 
 // 代理处理逻辑
 app.get('/*', (req, res) => {
   try {
-    res.setHeader('Access-Control-Allow-Origin','*');//允许跨域请求
     //访问首页
     if(req.path === '/proxy.html'){
       res.setHeader('Content-Type','text/html');
