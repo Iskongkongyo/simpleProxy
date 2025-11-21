@@ -17,8 +17,6 @@
 
 确保已安装 **Node.js** 和 **npm/cnpm**：
 
-bash
-
 ```
 node -v   # 查看 Node.js 版本
 npm -v    # 查看 npm 版本
